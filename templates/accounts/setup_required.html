@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Setup Required - ClientPortal{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header text-center">
+                <h4 class="mb-0">
+                    <i class="bi bi-exclamation-triangle text-warning me-2"></i>
+                    Setup Required
+                </h4>
+            </div>
+            <div class="card-body text-center">
+                <i class="bi bi-gear display-1 text-muted mb-4"></i>
+                <h5>Account Setup Required</h5>
+                <p class="text-muted">
+                    Your account needs to be properly configured before you can use ClientPortal.
+                    Please contact your administrator to set up your user profile and tenant association.
+                </p>
+                <div class="mt-4">
+                    <a href="{% url 'admin:index' %}" class="btn btn-primary me-2">
+                        <i class="bi bi-gear"></i> Go to Admin
+                    </a>
+                    <a href="{% url 'logout' %}" class="btn btn-outline-secondary">
+                        <i class="bi bi-box-arrow-right"></i> Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
